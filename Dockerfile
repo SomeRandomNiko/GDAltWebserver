@@ -1,4 +1,6 @@
-FROM debian:trixie-slim
+FROM alpine:latest
+
+RUN apk add --no-cache ca-certificates
 
 COPY bin/gdaltweb /app/gdaltweb
 
