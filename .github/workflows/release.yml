@@ -27,6 +27,8 @@ jobs:
           node-version: '22'
 
       - name: Build binary
+        env:
+          CGO_ENABLED: '0'
         run: npm run build
 
       - name: Set up Docker Buildx
